@@ -661,7 +661,7 @@ a:focus {
 
 .fact .fact-icon {
     position: relative;
-    margin: 7px 15px 0 15px;
+    margin: px 15px 0 15px;
     width: 60px;
     display: flex;
     align-items: center;
