@@ -199,7 +199,101 @@
                 </div>
             </div>
             <!-- Contact End -->
-
+	  <div class="container register">
+        <div class="row">
+          <div class="col-md-12">
+            <div
+              class="tab-pane fade show active text-align form-new"
+              id="home"
+              role="tabpanel"
+              aria-labelledby="home-tab"
+            >
+              <h3 class="register-heading text-nowrap">Admission Form</h3>
+              <div class="row register-form">
+                <div class="col-md-12">
+                  <form autocomplete="off">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="Name"
+                        id="name"
+                        class="form-control"
+                        placeholder="Your Name *"
+                        value=""
+                        required=""
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="Email"
+                        id="email"
+                        class="form-control"
+                        placeholder="Your Email *"
+                        value=""
+                        required=""
+                      />
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="number"
+                        name="Phone"
+                        id="phone"
+                        class="form-control"
+                        placeholder="Your Contact Number *"
+                        value=""
+                        required=""
+                      />
+                    </div>
+                    <div class="form-group">
+                      <textarea placeholder="product details(name,picture code & colour)" id="details" class="box" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <input
+                        type="submit"
+                        name="submit"
+                        onclick="gotowhatsapp()"
+                        class="btnSubmit btn-block"
+                        value="Submit to whatsapp"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+  
+  
+  
+      <span
+      class="float"
+      onclick="gotowhatsapp()"
+      style="
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        bottom: 120px;
+        right: 10px;
+        color: #fff;
+        border-radius: 50px;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 2px 2px 3px #999;
+        z-index: 111;
+      "
+      >
+      <img
+        src="https://trickuweb.com/whatsapp.png"
+        alt=""
+        height="60px"
+        width="60px"
+      />
+      </a>
+      
+      </span>
 
             <!-- Footer Start -->
             <div class="footer wow fadeIn" data-wow-delay="0.3s">
@@ -300,4 +394,21 @@
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
     </body>
+		    <script>
+        function gotowhatsapp() {
+            
+            var name = document.getElementById("name").value;
+            var phone = document.getElementById("phone").value;
+            var email = document.getElementById("email").value;
+            var details = document.getElementById("details").value;
+        
+            var url = "https://wa.me/263783728937?text=" 
+            + "Name: " + name + "%0a"
+            + "Phone: " + phone + "%0a"
+            + "Email: " + email  + "%0a"
+            + "Details: " + details; 
+        
+            window.open(url, '_blank').focus();
+        }
+        </script>
 </html>
